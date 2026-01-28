@@ -1,10 +1,169 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>ChunkNode</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modpack Download</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(30, 30, 50, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5),
+                        inset 0 0 20px rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #aaa;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            padding: 18px 45px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.6);
+            background: linear-gradient(135deg, #764ba2, #667eea);
+        }
+
+        .download-btn:active {
+            transform: translateY(1px);
+        }
+
+        .info-box {
+            background: rgba(40, 40, 70, 0.6);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 30px;
+            text-align: left;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .info-box h3 {
+            margin-bottom: 15px;
+            color: #667eea;
+            font-size: 20px;
+        }
+
+        .info-box ul {
+            list-style: none;
+            line-height: 1.8;
+            color: #ccc;
+        }
+
+        .info-box ul li:before {
+            content: "▹ ";
+            color: #667eea;
+            margin-right: 8px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            color: #777;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .icon {
+                font-size: 60px;
+            }
+
+            .download-btn {
+                padding: 15px 30px;
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>Welcome to ChunkNode</h1>
-  <p>modpack link coming soon.</p>
+    <div class="container">
+        <div class="icon">🎮</div>
+        <h1>Modpack Download</h1>
+        <p class="subtitle">Click the button below to download the latest version of the modpack. Make sure you have enough storage space before downloading.</p>
+        
+        <a href="https://drive.proton.me/urls/RVK14VCT08#enE3bgo1zrOM" class="download-btn" download>
+            📥 Download Modpack
+        </a>
+
+        <div class="info-box">
+            <h3>📋 Installation Instructions</h3>
+            <ul>
+                <li>Download the modpack ZIP file</li>
+                <li>Extract the contents to your game directory</li>
+                <li>Launch the game and enjoy!</li>
+                <li>Make sure you have the required game version installed</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>🔗 Direct Link: drive.proton.me</p>
+        </div>
+    </div>
 </body>
 </html>

@@ -115,6 +115,38 @@
             margin-right: 8px;
         }
 
+        .video-container {
+            background: rgba(40, 40, 70, 0.6);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .video-container h3 {
+            margin-bottom: 15px;
+            color: #667eea;
+            font-size: 20px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
         .footer {
             margin-top: 30px;
             color: #777;
@@ -138,6 +170,10 @@
                 padding: 15px 30px;
                 font-size: 16px;
             }
+
+            .video-wrapper {
+                padding-bottom: 56.25%;
+            }
         }
     </style>
 </head>
@@ -155,10 +191,21 @@
             <h3>📋 Installation Instructions</h3>
             <ul>
                 <li>Download the modpack .mrpack</li>
-                <li>drag and drop the mrpack into your modpacks list on modrinth, prism luncher, ATlaucnher, ect.</li>
+                <li>Drag and drop the .mrpack into your modpacks list on Modrinth, Prism Launcher, ATLauncher, etc.</li>
                 <li>Launch the game and enjoy!</li>
-                <li>lern how to instlal modpacks via modrinth:</li>
             </ul>
+        </div>
+
+        <div class="video-container">
+            <h3>🎥 Video Tutorial</h3>
+            <p style="color: #aaa; margin-bottom: 15px; font-size: 14px;">Learn how to install modpacks via Modrinth:</p>
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/2FGziLHil7A" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
 
         <div class="footer">

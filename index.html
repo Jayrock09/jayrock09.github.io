@@ -169,7 +169,7 @@
             text-align: center;
         }
 
-        /* NEW SERVER IP SECTION */
+        /* SERVER IP SECTION - BELOW INSTRUCTIONS */
         .server-info {
             background: rgba(40, 40, 70, 0.6);
             border-radius: 12px;
@@ -177,11 +177,6 @@
             margin-top: 20px;
             text-align: center;
             border: 1px solid rgba(255, 255, 255, 0.05);
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            width: 250px;
-            z-index: 10;
         }
 
         .server-info h3 {
@@ -219,15 +214,6 @@
                 padding: 15px 30px;
                 font-size: 16px;
             }
-            
-            /* Adjust server info for mobile */
-            .server-info {
-                position: relative;
-                bottom: auto;
-                left: auto;
-                margin-top: 30px;
-                width: 100%;
-            }
         }
     </style>
 </head>
@@ -251,6 +237,12 @@
                         <li>Drag and drop the .mrpack into your modpacks list on Modrinth, Prism Launcher, ATLauncher, etc.</li>
                         <li>Launch the game and enjoy!</li>
                     </ul>
+                </div>
+                
+                <!-- SERVER IP SECTION - DIRECTLY BELOW INSTRUCTIONS -->
+                <div class="server-info">
+                    <h3>IP TO SERVER</h3>
+                    <p class="server-ip">play.chunknode.net</p>
                 </div>
             </div>
 
@@ -282,12 +274,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- SERVER IP SECTION - BOTTOM LEFT -->
-        <div class="server-info">
-            <h3>IP TO SERVER</h3>
-            <p class="server-ip">play.chunknode.net</p>
         </div>
 
         <div class="footer">

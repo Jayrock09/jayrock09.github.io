@@ -26,17 +26,22 @@
             background: rgba(30, 30, 50, 0.8);
             backdrop-filter: blur(10px);
             border-radius: 20px;
-            padding: 50px;
-            text-align: center;
-            max-width: 600px;
+            padding: 40px;
+            max-width: 1200px;
             width: 100%;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5),
                         inset 0 0 20px rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
+        .columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
         .icon {
-            font-size: 80px;
+            font-size: 60px;
             margin-bottom: 20px;
             background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
             -webkit-background-clip: text;
@@ -45,7 +50,7 @@
         }
 
         h1 {
-            font-size: 36px;
+            font-size: 32px;
             margin-bottom: 15px;
             background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
             -webkit-background-clip: text;
@@ -55,7 +60,7 @@
         }
 
         .subtitle {
-            font-size: 18px;
+            font-size: 16px;
             color: #aaa;
             margin-bottom: 30px;
             line-height: 1.6;
@@ -115,18 +120,28 @@
             margin-right: 8px;
         }
 
+        .videos-section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+
         .video-container {
             background: rgba(40, 40, 70, 0.6);
             border-radius: 12px;
             padding: 20px;
-            margin-top: 20px;
+            margin-bottom: 20px;
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .video-container h3 {
             margin-bottom: 15px;
             color: #667eea;
-            font-size: 20px;
+            font-size: 18px;
         }
 
         .video-wrapper {
@@ -151,9 +166,15 @@
             margin-top: 30px;
             color: #777;
             font-size: 14px;
+            text-align: center;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 900px) {
+            .columns {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
             .container {
                 padding: 30px 20px;
             }
@@ -163,60 +184,66 @@
             }
 
             .icon {
-                font-size: 60px;
+                font-size: 50px;
             }
 
             .download-btn {
                 padding: 15px 30px;
                 font-size: 16px;
             }
-
-            .video-wrapper {
-                padding-bottom: 56.25%;
-            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="icon">🎮</div>
-        <h1>Modpack Download</h1>
-        <p class="subtitle">Click the button below to download the latest version of the modpack. Make sure you have enough storage space before downloading.</p>
-        
-        <a href="https://drive.proton.me/urls/RVK14VCT08#enE3bgo1zrOM" class="download-btn" download>
-            📥 Download Modpack
-        </a>
+        <div class="columns">
+            <!-- LEFT COLUMN: Download & Instructions -->
+            <div class="download-section">
+                <div class="icon">🎮</div>
+                <h1>Modpack Download</h1>
+                <p class="subtitle">Click the button below to download the latest version of the modpack. Make sure you have enough storage space before downloading.</p>
+                
+                <a href="https://drive.proton.me/urls/RVK14VCT08#enE3bgo1zrOM" class="download-btn" download>
+                    📥 Download Modpack
+                </a>
 
-        <div class="info-box">
-            <h3>📋 Installation Instructions</h3>
-            <ul>
-                <li>Download the modpack .mrpack</li>
-                <li>Drag and drop the .mrpack into your modpacks list on Modrinth, Prism Launcher, ATLauncher, etc.</li>
-                <li>Launch the game and enjoy!</li>
-            </ul>
-        </div>
-
-        <div class="video-container">
-            <h3>🎥 Video Tutorial</h3>
-            <p style="color: #aaa; margin-bottom: 15px; font-size: 14px;">Learn how to install modpacks via Modrinth:</p>
-            <div class="video-wrapper">
-                <iframe 
-                    src="https://www.youtube.com/embed/2FGziLHil7A" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
+                <div class="info-box">
+                    <h3>📋 Installation Instructions</h3>
+                    <ul>
+                        <li>Download the modpack .mrpack</li>
+                        <li>Drag and drop the .mrpack into your modpacks list on Modrinth, Prism Launcher, ATLauncher, etc.</li>
+                        <li>Launch the game and enjoy!</li>
+                    </ul>
+                </div>
             </div>
-        </div>
 
-        <div class="video-container">
-            <h3>🚀 How to Install Best Minecraft Modpack Launcher</h3>
-            <p style="color: #aaa; margin-bottom: 15px; font-size: 14px;">Step-by-step guide to setting up your modpack launcher:</p>
-            <div class="video-wrapper">
-                <iframe 
-                    src="https://www.youtube.com/embed/LbMtmGKGXS0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
+            <!-- RIGHT COLUMN: Videos -->
+            <div class="videos-section">
+                <h2>🎥 Video Tutorials</h2>
+                
+                <div class="video-container">
+                    <h3>How to Install Modpacks via Modrinth</h3>
+                    <p style="color: #aaa; margin-bottom: 15px; font-size: 13px;">Learn the easy way to install modpacks:</p>
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/2FGziLHil7A" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="video-container">
+                    <h3>How to Install Best Minecraft Modpack Launcher</h3>
+                    <p style="color: #aaa; margin-bottom: 15px; font-size: 13px;">Step-by-step guide to setting up your launcher:</p>
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/LbMtmGKGXS0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
             </div>
         </div>
 

@@ -120,6 +120,55 @@
             margin-right: 8px;
         }
 
+        /* CURRENT PACK SECTION */
+        .current-pack {
+            background: rgba(40, 40, 70, 0.6);
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 20px;
+            text-align: left;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .current-pack h3 {
+            margin-bottom: 15px;
+            color: #667eea;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .current-pack h3:before {
+            content: "✨";
+            font-size: 24px;
+        }
+
+        .current-pack-content {
+            line-height: 1.8;
+            color: #ccc;
+            font-size: 16px;
+        }
+
+        .mod-list {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .mod-list li {
+            margin-bottom: 8px;
+            color: #f093fb;
+            font-weight: 500;
+        }
+
+        .mod-list li:before {
+            content: "✓ ";
+            color: #667eea;
+            font-weight: bold;
+        }
+
         .videos-section h2 {
             font-size: 24px;
             margin-bottom: 20px;
@@ -185,11 +234,17 @@
             font-size: 20px;
         }
 
+        .server-info h3:before {
+            content: "🌐 ";
+            font-size: 20px;
+        }
+
         .server-ip {
             font-size: 24px;
             font-weight: bold;
             color: #f093fb;
             word-break: break-all;
+            letter-spacing: 1px;
         }
 
         @media (max-width: 900px) {
@@ -226,9 +281,25 @@
                 <h1>Modpack Download</h1>
                 <p class="subtitle">Click the button below to download the latest version of the modpack. Make sure you have enough storage space before downloading.</p>
                 
-                <a href="https://drive.proton.me/urls/RVK14VCT08#enE3bgo1zrOM" class="download-btn" download>
+                <a href="https://drive.proton.me/urls/DVXA8M4FPW#LHOld9HCKyAw" class="download-btn" download>
                     📥 Download Modpack
                 </a>
+
+                <!-- CURRENT PACK SECTION -->
+                <div class="current-pack">
+                    <h3>Current Pack</h3>
+                    <div class="current-pack-content">
+                        <p>Create modpack with a bunch of addons focused on performance and distant terrain rendering. This pack includes optimizations to enhance your Minecraft experience with smooth gameplay and stunning visuals.</p>
+                        
+                        <ul class="mod-list">
+                            <li>Create Mod</li>
+                            <li>Performance Optimizations</li>
+                            <li>Distant Terrain Enhancements</li>
+                            <li>Visual Improvements</li>
+                            <li>Quality of Life Addons</li>
+                        </ul>
+                    </div>
+                </div>
 
                 <div class="info-box">
                     <h3>📋 Installation Instructions</h3>

@@ -2,353 +2,193 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>ChunkNode | Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modpack Download</title>
+    <meta name="description" content="ChunkNode - Personal website of Jayrock09. Random web projects and chaos.">
+    
     <style>
+        :root {
+            --bg: #050805;
+            --card: #0b120b;
+            --accent: #22ff66;
+            --text: #eaffea;
+            --subtext: #88aa88;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-            color: #fff;
+            background: linear-gradient(135deg, #050805, #081208);
+            color: var(--text);
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+        }
+
+        header {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: var(--accent);
+            text-shadow: 0 0 15px rgba(34,255,102,0.6);
+        }
+
+        header p {
+            margin-top: 10px;
+            color: var(--subtext);
+            font-size: 1.1rem;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
         }
 
         .container {
-            background: rgba(30, 30, 50, 0.8);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 40px;
-            max-width: 1200px;
-            width: 100%;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5),
-                        inset 0 0 20px rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
         }
 
-        .columns {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
+        .card {
+            background: var(--card);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.7);
+            border: 1px solid rgba(34,255,102,0.15);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .icon {
-            font-size: 60px;
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.9);
         }
 
-        h1 {
-            font-size: 32px;
-            margin-bottom: 15px;
-            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 700;
+        .card h2 {
+            margin-bottom: 10px;
+            color: var(--accent);
         }
 
-        .subtitle {
-            font-size: 16px;
-            color: #aaa;
-            margin-bottom: 30px;
+        .card p {
+            color: var(--subtext);
             line-height: 1.6;
         }
 
-        .download-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            text-decoration: none;
-            padding: 18px 45px;
-            border-radius: 50px;
-            font-size: 18px;
-            font-weight: 600;
-            margin: 20px 0;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-            border: none;
-            cursor: pointer;
-            width: 100%;
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
 
-        .download-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.6);
-            background: linear-gradient(135deg, #764ba2, #667eea);
-        }
-
-        .download-btn:active {
-            transform: translateY(1px);
-        }
-
-        .info-box {
-            background: rgba(40, 40, 70, 0.6);
-            border-radius: 12px;
-            padding: 20px;
-            margin-top: 30px;
-            text-align: left;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .info-box h3 {
-            margin-bottom: 15px;
-            color: #667eea;
-            font-size: 20px;
-        }
-
-        .info-box ul {
-            list-style: none;
-            line-height: 1.8;
-            color: #ccc;
-        }
-
-        .info-box ul li:before {
-            content: "▹ ";
-            color: #667eea;
-            margin-right: 8px;
-        }
-
-        /* CURRENT PACK SECTION */
-        .current-pack {
-            background: rgba(40, 40, 70, 0.6);
-            border-radius: 12px;
+        footer {
+            text-align: center;
             padding: 25px;
-            margin-top: 20px;
-            text-align: left;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            position: relative;
-            overflow: hidden;
+            color: var(--subtext);
+            font-size: 0.9rem;
         }
 
-        .current-pack h3 {
-            margin-bottom: 15px;
-            color: #667eea;
-            font-size: 22px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .current-pack h3:before {
-            content: "✨";
-            font-size: 24px;
-        }
-
-        .current-pack-content {
-            line-height: 1.8;
-            color: #ccc;
-            font-size: 16px;
-        }
-
-        .mod-list {
+        .button {
+            display: inline-block;
             margin-top: 15px;
-            padding-left: 20px;
-        }
-
-        .mod-list li {
-            margin-bottom: 8px;
-            color: #f093fb;
-            font-weight: 500;
-        }
-
-        .mod-list li:before {
-            content: "✓ ";
-            color: #667eea;
+            padding: 10px 18px;
+            border-radius: 8px;
+            background: var(--accent);
+            color: black;
             font-weight: bold;
+            text-decoration: none;
+            transition: 0.2s;
         }
 
-        .videos-section h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 700;
+        .button:hover {
+            opacity: 0.85;
         }
 
-        .video-container {
-            background: rgba(40, 40, 70, 0.6);
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+        .links a {
+            display: block;
+            margin-top: 10px;
+            color: var(--accent);
+            text-decoration: none;
         }
 
-        .video-container h3 {
-            margin-bottom: 15px;
-            color: #667eea;
-            font-size: 18px;
-        }
-
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .footer {
-            margin-top: 30px;
-            color: #777;
-            font-size: 14px;
-            text-align: center;
-        }
-
-        /* SERVER IP SECTION - BELOW INSTRUCTIONS */
-        .server-info {
-            background: rgba(40, 40, 70, 0.6);
-            border-radius: 12px;
-            padding: 20px;
-            margin-top: 20px;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .server-info h3 {
-            margin-bottom: 10px;
-            color: #667eea;
-            font-size: 20px;
-        }
-
-        .server-info h3:before {
-            content: "🌐 ";
-            font-size: 20px;
-        }
-
-        .server-ip {
-            font-size: 24px;
-            font-weight: bold;
-            color: #f093fb;
-            word-break: break-all;
-            letter-spacing: 1px;
-        }
-
-        @media (max-width: 900px) {
-            .columns {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .container {
-                padding: 30px 20px;
-            }
-
-            h1 {
-                font-size: 28px;
-            }
-
-            .icon {
-                font-size: 50px;
-            }
-
-            .download-btn {
-                padding: 15px 30px;
-                font-size: 16px;
-            }
+        .links a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="columns">
-            <!-- LEFT COLUMN: Download & Instructions -->
-            <div class="download-section">
-                <div class="icon">🎮</div>
-                <h1>Modpack Download</h1>
-                <p class="subtitle">Click the button below to download the latest version of the modpack. Make sure you have enough storage space before downloading.</p>
-                
-                <a href="https://drive.proton.me/urls/XJCXKDR6EC#E6V3d6eitIHQ" class="download-btn" download>
-                    📥 Download Modpack
-                </a>
 
-                <!-- CURRENT PACK SECTION -->
-                <div class="current-pack">
-                    <h3>Current Pack</h3>
-                    <div class="current-pack-content">
-                        <p>Create modpack with a bunch of addons focused on performance and distant terrain rendering. This pack includes optimizations to enhance your Minecraft experience with smooth gameplay and stunning visuals.</p>
-                        
-                        <ul class="mod-list">
-                            <li>Create Mod</li>
-                            <li>Performance Optimizations</li>
-                            <li>Visual Improvements</li>
-                            <li>Quality of Life Addons</li>
-                        </ul>
-                    </div>
-                </div>
+<header>
+    <h1>ChunkNode</h1>
+    <p>Jayrock09's Personal Chaos Domain</p>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">What I'm Doing</a>
+        <a href="#links">Links</a>
+    </nav>
+</header>
 
-                <div class="info-box">
-                    <h3>📋 Installation Instructions</h3>
-                    <ul>
-                        <li>Download the modpack .mrpack</li>
-                        <li>Drag and drop the .mrpack into your modpacks list on Modrinth, Prism Launcher, ATLauncher, etc.</li>
-                        <li>Launch the game and enjoy!</li>
-                    </ul>
-                </div>
-                
-                <!-- SERVER IP SECTION - DIRECTLY BELOW INSTRUCTIONS -->
-                <div class="server-info">
-                    <h3>IP TO SERVER</h3>
-                    <p class="server-ip">play.chunknode.net</p>
-                </div>
+<div class="container">
+
+    <section id="about" class="card">
+        <h2>About Me</h2>
+        <p>
+            Yo. I’m Jayrock09. ChunkNode is no longer a hosting company.
+            It’s just my domain now — where I build random stuff, test ideas,
+            break things, and make cool web experiments.
+        </p>
+    </section>
+
+    <section id="projects" class="card">
+        <h2>What I'm Working On</h2>
+        <div class="projects">
+            <div class="card">
+                <h2>Random Ass Web Shit</h2>
+                <p>Unfinished projects, weird experiments, chaotic tools, and whatever I feel like building.</p>
             </div>
-
-            <!-- RIGHT COLUMN: Videos -->
-            <div class="videos-section">
-                <h2>🎥 Video Tutorials</h2>
-                
-                <div class="video-container">
-                    <h3>How to Install Modpacks via Modrinth</h3>
-                    <p style="color: #aaa; margin-bottom: 15px; font-size: 13px;">Learn the easy way to install modpacks:</p>
-                    <div class="video-wrapper">
-                        <iframe 
-                            src="https://www.youtube.com/embed/2FGziLHil7A" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-
-                <div class="video-container">
-                    <h3>How to Install Best Minecraft Modpack Launcher</h3>
-                    <p style="color: #aaa; margin-bottom: 15px; font-size: 13px;">Step-by-step guide to setting up your launcher:</p>
-                    <div class="video-wrapper">
-                        <iframe 
-                            src="https://www.youtube.com/embed/LbMtmGKGXS0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
+            <div class="card">
+                <h2>YouTube Stuff</h2>
+                <p>Gaming, experiments, and whatever content I decide to drop.</p>
+                <a href="https://www.youtube.com/@jayrock0927" target="_blank" class="button">Visit My YouTube</a>
+            </div>
+            <div class="card">
+                <h2>Community</h2>
+                <p>Join the Discord if you want to see updates, projects, or just hang out.</p>
+                <a href="https://discord.gg/cHHwVygZbT" target="_blank" class="button">Join Discord</a>
             </div>
         </div>
+    </section>
 
-        <div class="footer">
-            <p>🔗 Direct Link: drive.proton.me</p>
+    <section id="links" class="card">
+        <h2>Direct Links</h2>
+        <div class="links">
+            <a href="https://www.youtube.com/@jayrock0927" target="_blank">YouTube</a>
+            <a href="https://discord.gg/cHHwVygZbT" target="_blank">Discord</a>
         </div>
-    </div>
+    </section>
+
+</div>
+
+<footer>
+    © 2026 ChunkNode. Built by Jayrock09.
+</footer>
+
 </body>
 </html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChunkNode Modpack</title>
+
+<style>
+:root {
+    --bg: #050805;
+    --card: #0b120b;
+    --accent: #22ff66;
+    --text: #eaffea;
+    --subtext: #88aa88;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #050805, #081208);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    width: 100%;
+    border: 1px solid rgba(34,255,102,0.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+    color: var(--accent);
+}
+
+.subtitle {
+    color: var(--subtext);
+    margin-bottom: 20px;
+}
+
+.download-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: black;
+    text-decoration: none;
+    padding: 16px 40px;
+    border-radius: 40px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px 0;
+    transition: 0.25s;
+    width: 100%;
+    text-align: center;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.info-box, .current-pack, .video-container, .server-info {
+    background: #0f1a0f;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid rgba(34,255,102,0.1);
+}
+
+.mod-list {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.mod-list li {
+    margin-bottom: 6px;
+}
+
+.server-ip {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.footer {
+    margin-top: 30px;
+    text-align: center;
+    color: var(--subtext);
+}
+
+@media (max-width: 900px) {
+    .columns {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<div class="columns">
+
+<div>
+<div class="icon">🎮</div>
+<h1>ChunkNode Modpack</h1>
+<p class="subtitle">Performance-focused Create modpack with distant terrain rendering and optimizations.</p>
+
+<a href="https://drive.proton.me/urls/XJCXKDR6EC#E6V3d6eitIHQ" class="download-btn">
+📥 Download Modpack
+</a>
+
+<div class="current-pack">
+<h3>Current Pack</h3>
+<p>Create modpack with performance optimizations, distant terrain, and quality-of-life addons.</p>
+
+<ul class="mod-list">
+<li>Create Mod</li>
+<li>Performance Optimizations</li>
+<li>Visual Improvements</li>
+<li>Quality of Life Addons</li>
+</ul>
+</div>
+
+<div class="info-box">
+<h3>Installation</h3>
+<ul>
+<li>Download the .mrpack</li>
+<li>Import into Modrinth, Prism, or ATLauncher</li>
+<li>Launch and play</li>
+</ul>
+</div>
+
+<div class="server-info">
+<h3>Server IP</h3>
+<p class="server-ip">play.chunknode.net</p>
+</div>
+</div>
+
+<div>
+<h2>Video Tutorials</h2>
+
+<div class="video-container">
+<h3>Install Modpacks via Modrinth</h3>
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/2FGziLHil7A" allowfullscreen></iframe>
+</div>
+</div>
+
+<div class="video-container">
+<h3>Best Launcher Setup</h3>
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/LbMtmGKGXS0" allowfullscreen></iframe>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="footer">
+ChunkNode • Modpack Download
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+:root {
+    --bg: #050805;
+    --card: #0b120b;
+    --accent: #22ff66;
+    --text: #eaffea;
+    --subtext: #88aa88;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Segoe UI, sans-serif;
+    background: linear-gradient(135deg, #050805, #081208);
+    color: var(--text);
+}
+
+/* NAVBAR */
+
+.navbar {
+    background: #060a06;
+    border-bottom: 1px solid rgba(34,255,102,0.15);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: var(--text);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.2s;
+}
+
+.navbar a:hover {
+    color: var(--accent);
+}
+
+.logo {
+    font-weight: bold;
+    color: var(--accent);
+    font-size: 18px;
+}
+
+/* CONTENT */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(34,255,102,0.1);
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 22px;
+    background: var(--accent);
+    color: black;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.button:hover {
+    opacity: 0.9;
+}

@@ -1,194 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>ChunkNode | Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ChunkNode - Personal website of Jayrock09. Random web projects and chaos.">
-    
-    <style>
-        :root {
-            --bg: #050805;
-            --card: #0b120b;
-            --accent: #22ff66;
-            --text: #eaffea;
-            --subtext: #88aa88;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background: linear-gradient(135deg, #050805, #081208);
-            color: var(--text);
-            min-height: 100vh;
-        }
-
-        header {
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            color: var(--accent);
-            text-shadow: 0 0 15px rgba(34,255,102,0.6);
-        }
-
-        header p {
-            margin-top: 10px;
-            color: var(--subtext);
-            font-size: 1.1rem;
-        }
-
-        nav {
-            margin-top: 20px;
-        }
-
-        nav a {
-            color: var(--text);
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--accent);
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 40px 20px;
-        }
-
-        .card {
-            background: var(--card);
-            padding: 25px;
-            border-radius: 15px;
-            margin-bottom: 25px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.7);
-            border: 1px solid rgba(34,255,102,0.15);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.9);
-        }
-
-        .card h2 {
-            margin-bottom: 10px;
-            color: var(--accent);
-        }
-
-        .card p {
-            color: var(--subtext);
-            line-height: 1.6;
-        }
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 25px;
-            color: var(--subtext);
-            font-size: 0.9rem;
-        }
-
-        .button {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 18px;
-            border-radius: 8px;
-            background: var(--accent);
-            color: black;
-            font-weight: bold;
-            text-decoration: none;
-            transition: 0.2s;
-        }
-
-        .button:hover {
-            opacity: 0.85;
-        }
-
-        .links a {
-            display: block;
-            margin-top: 10px;
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        .links a:hover {
-            text-decoration: underline;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>ChunkNode</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-    <h1>ChunkNode</h1>
-    <p>Jayrock09's Personal Chaos Domain</p>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">What I'm Doing</a>
-        <a href="#links">Links</a>
-    </nav>
-</header>
+<div class="navbar">
+<div class="logo">ChunkNode</div>
+<div>
+<a href="/">Home</a>
+<a href="/link/">Modpack</a>
+</div>
+</div>
 
 <div class="container">
 
-    <section id="about" class="card">
-        <h2>About Me</h2>
-        <p>
-            Yo. I’m Jayrock09. ChunkNode is no longer a hosting company.
-            It’s just my domain now — where I build random stuff, test ideas,
-            break things, and make cool web experiments.
-        </p>
-    </section>
-
-    <section id="projects" class="card">
-        <h2>What I'm Working On</h2>
-        <div class="projects">
-            <div class="card">
-                <h2>Random Ass Web Shit</h2>
-                <p>Unfinished projects, weird experiments, chaotic tools, and whatever I feel like building.</p>
-            </div>
-            <div class="card">
-                <h2>YouTube Stuff</h2>
-                <p>Gaming, experiments, and whatever content I decide to drop.</p>
-                <a href="https://www.youtube.com/@jayrock0927" target="_blank" class="button">Visit My YouTube</a>
-            </div>
-            <div class="card">
-                <h2>Community</h2>
-                <p>Join the Discord if you want to see updates, projects, or just hang out.</p>
-                <a href="https://discord.gg/cHHwVygZbT" target="_blank" class="button">Join Discord</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="links" class="card">
-        <h2>Direct Links</h2>
-        <div class="links">
-            <a href="https://www.youtube.com/@jayrock0927" target="_blank">YouTube</a>
-            <a href="https://discord.gg/cHHwVygZbT" target="_blank">Discord</a>
-        </div>
-    </section>
-
+<div class="card">
+<h1>Welcome to ChunkNode</h1>
+<p>My personal domain where I build random web stuff, experiments, and projects.</p>
 </div>
 
-<footer>
-    © 2026 ChunkNode. Built by Jayrock09.
-</footer>
+<div class="card">
+<h2>Projects</h2>
+<p>Random tools, experiments, and web chaos.</p>
+<a href="/link/" class="button">View Modpack Page</a>
+</div>
+
+<div class="card">
+<h2>Links</h2>
+<a href="https://www.youtube.com/@jayrock0927" class="button">YouTube</a>
+<a href="https://discord.gg/cHHwVygZbT" class="button">Discord</a>
+</div>
+
+</div>
 
 </body>
 </html>

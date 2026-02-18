@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>jayrock09</title>
+  <meta name="description" content="jayrock09 — I build random stuff on the internet. Links, experiments, and whatever I feel like making." />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="/" aria-label="Go to homepage">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__text">jayrock09</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="/" class="is-active">Home</a>
+        <a href="/link/">Links</a>
+        <a href="/voxy/">Voxy Shaders</a>
+      </nav>
+
+      <div class="nav__cta">
+        <a class="btn btn--ghost" href="https://www.youtube.com/@jayrock0927" target="_blank" rel="noopener">YouTube</a>
+        <a class="btn" href="https://discord.gg/qvprsaQfF" target="_blank" rel="noopener">Discord</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="bg">
+        <div class="bg__grid" aria-hidden="true"></div>
+        <div class="bg__blob bg__blob--a" aria-hidden="true"></div>
+        <div class="bg__blob bg__blob--b" aria-hidden="true"></div>
+        <div class="bg__glow" aria-hidden="true"></div>
+      </div>
+
+      <div class="wrap hero__content">
+        <div class="badge reveal">
+          <span class="badge__ping" aria-hidden="true"></span>
+          <span>random builds • experiments • vibes</span>
+        </div>
+
+        <h1 class="reveal">
+          Hey — I'm <span class="text-accent">jayrock</span>.
+          <span class="subhead">I do random stuff on this site.</span>
+        </h1>
+
+        <p class="lead reveal">
+          Sometimes it's game/server things, sometimes it's tools, sometimes it's pure chaos.
+          If it looks fun, I probably built it.
+        </p>
+
+        <div class="hero__actions reveal">
+          <a class="btn btn--big" href="/link/">My links & stuff</a>
+          <a class="btn btn--big btn--ghost" href="#sections">What's here?</a>
+        </div>
+
+        <div class="stats reveal" role="list">
+          <div class="stat" role="listitem">
+            <div class="stat__k">Uploads</div>
+            <div class="stat__v">YouTube</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat__k">Hangout</div>
+            <div class="stat__v">Discord</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat__k">Site</div>
+            <div class="stat__v">Experiments</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sections" class="section wrap">
+      <div class="section__head reveal">
+        <h2>What you'll find here</h2>
+        <p>Three broad categories. The rest is whatever my brain decides at 2am.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card reveal">
+          <div class="card__icon" aria-hidden="true">⚡</div>
+          <h3>Random builds</h3>
+          <p>Little web projects, pages, and experiments. Sometimes useful. Sometimes just funny.</p>
+          <div class="card__meta">Updated whenever</div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__icon" aria-hidden="true">🎮</div>
+          <h3>Gaming / server stuff</h3>
+          <p>Minecraft-ish things, tools, configs, and whatever I'm testing.</p>
+          <div class="card__meta">If it breaks, it's a feature</div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__icon" aria-hidden="true">🧪</div>
+          <h3>Experiments</h3>
+          <p>UI ideas, motion, effects, and other “how far can I push this?” moments.</p>
+          <div class="card__meta">May contain chaos</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="split">
+        <div class="reveal">
+          <h2>Quick links</h2>
+          <p>Everything important in one place — socials, projects, downloads, whatever.</p>
+          <div class="row">
+            <a class="pill" href="https://www.youtube.com/@jayrock0927" target="_blank" rel="noopener">▶ YouTube</a>
+            <a class="pill" href="https://discord.gg/qvprsaQfF" target="_blank" rel="noopener">💬 Discord</a>
+            <a class="pill" href="/link/">🔗 Links page</a>
+          </div>
+        </div>
+
+        <div class="panel reveal">
+          <div class="panel__title">Status</div>
+          <div class="panel__line">
+            <span class="dot"></span>
+            <span>Site is alive and being upgraded</span>
+          </div>
+          <div class="panel__hint">Tip: check the Links page for the newest stuff.</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <div class="footer__left">
+          <div class="brand brand--small">
+            <span class="brand__dot" aria-hidden="true"></span>
+            <span class="brand__text">jayrock09</span>
+          </div>
+          <div class="footer__sub">Built for fun. Updated whenever.</div>
+        </div>
+        <div class="footer__right">
+          <a href="/link/">Links</a>
+          <a href="https://www.youtube.com/@jayrock0927" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://discord.gg/qvprsaQfF" target="_blank" rel="noopener">Discord</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Scroll reveal (respects reduced motion)
+    (function () {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) return;
+      const els = document.querySelectorAll('.reveal');
+      const io = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            e.target.classList.add('reveal--in');
+            io.unobserve(e.target);
+          }
+        }
+      }, { threshold: 0.12 });
+      els.forEach(el => io.observe(el));
+    })();
+  </script>
+</body>
+</html>

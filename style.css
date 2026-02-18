@@ -395,15 +395,35 @@ h1{
   flex-wrap:wrap;
   gap:10px;
 }
+
+/* UPDATED: smoother/faded chips (no hard color stop) */
 .chip{
+  position:relative;
   display:inline-flex;
   align-items:center;
   padding: 8px 12px;
   border-radius: 999px;
   border: 1px solid var(--stroke2);
-  background: linear-gradient(180deg, rgba(34,255,102,.08), rgba(12,20,12,.25));
   color: var(--text);
   font-size: 13px;
+  background: linear-gradient(135deg,
+    rgba(34,255,102,.16) 0%,
+    rgba(109,255,155,.12) 45%,
+    rgba(12,20,12,.28) 100%
+  );
+  backdrop-filter: blur(8px);
+}
+.chip::before{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  border-radius: inherit;
+  background: radial-gradient(120% 140% at 20% 10%,
+    rgba(34,255,102,.14),
+    transparent 60%
+  );
+  pointer-events:none;
+  opacity:.9;
 }
 
 .shaderGrid{
@@ -477,7 +497,10 @@ h1{
   color: var(--muted);
   line-height:1.5;
 }
-.note{
+
+/* IMPORTANT: keep .note for your big note block.
+   This "NOTE:" pill is now .tag to avoid conflicts. */
+.tag{
   display:inline-block;
   margin-left:.25em;
   color: var(--text);
@@ -488,6 +511,7 @@ h1{
   background: rgba(34,255,102,.08);
   font-size: 12px;
 }
+
 .shaderCard__actions{
   margin-top: 12px;
   display:flex;

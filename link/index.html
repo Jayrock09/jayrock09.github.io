@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>jayrock09 • links</title>
+  <meta name="description" content="Links for jayrock09 — YouTube, Discord, and whatever I'm building." />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="/" aria-label="Go to homepage">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__text">jayrock09</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/link/" class="is-active">Links</a>
+      </nav>
+
+      <div class="nav__cta">
+        <a class="btn btn--ghost" href="https://www.youtube.com/@jayrock0927" target="_blank" rel="noopener">YouTube</a>
+        <a class="btn" href="https://discord.gg/qvprsaQfF" target="_blank" rel="noopener">Discord</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section wrap">
+      <div class="section__head reveal">
+        <h1 class="h1">Links & stuff</h1>
+        <p class="lead">Everything important. Everything random. All in one place.</p>
+      </div>
+
+      <div class="links-grid">
+        <a class="linkcard reveal" href="https://www.youtube.com/@jayrock0927" target="_blank" rel="noopener">
+          <div class="linkcard__top">
+            <div class="linkcard__icon" aria-hidden="true">▶</div>
+            <div>
+              <div class="linkcard__title">YouTube</div>
+              <div class="linkcard__desc">Videos, clips, whatever I'm posting.</div>
+            </div>
+          </div>
+          <div class="linkcard__cta">Open channel →</div>
+        </a>
+
+        <a class="linkcard reveal" href="https://discord.gg/qvprsaQfF" target="_blank" rel="noopener">
+          <div class="linkcard__top">
+            <div class="linkcard__icon" aria-hidden="true">💬</div>
+            <div>
+              <div class="linkcard__title">Discord server</div>
+              <div class="linkcard__desc">Hang out, updates, randomness.</div>
+            </div>
+          </div>
+          <div class="linkcard__cta">Join server →</div>
+        </a>
+
+        <a class="linkcard reveal" href="/" >
+          <div class="linkcard__top">
+            <div class="linkcard__icon" aria-hidden="true">🏠</div>
+            <div>
+              <div class="linkcard__title">Home</div>
+              <div class="linkcard__desc">Back to the main page.</div>
+            </div>
+          </div>
+          <div class="linkcard__cta">Go home →</div>
+        </a>
+
+        <div class="note reveal">
+          <div class="note__title">What is this site?</div>
+          <p>
+            It's my personal playground. I do <strong>random stuff</strong> here — experiments, pages, tools, and whatever idea
+            I get. If something looks new, I probably just pushed it.
+          </p>
+          <div class="note__hint">If you want something added here, DM me on Discord.</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <div class="footer__left">
+          <div class="brand brand--small">
+            <span class="brand__dot" aria-hidden="true"></span>
+            <span class="brand__text">jayrock09</span>
+          </div>
+          <div class="footer__sub">Links page • updated whenever</div>
+        </div>
+        <div class="footer__right">
+          <a href="/">Home</a>
+          <a href="https://www.youtube.com/@jayrock0927" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://discord.gg/qvprsaQfF" target="_blank" rel="noopener">Discord</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) return;
+      const els = document.querySelectorAll('.reveal');
+      const io = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            e.target.classList.add('reveal--in');
+            io.unobserve(e.target);
+          }
+        }
+      }, { threshold: 0.12 });
+      els.forEach(el => io.observe(el));
+    })();
+  </script>
+</body>
+</html>

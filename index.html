@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>jayrock09</title>
-  <meta name="description" content="jayrock09 — I build random stuff on the internet. Links, experiments, and whatever I feel like making." />
-  <link rel="stylesheet" href="/style.css" />
+  <meta name="description" content="jayrock09 makes Minecraft performance packs, web experiments, videos, and small browser games." />
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -13,157 +14,219 @@
 
   <header class="nav">
     <div class="nav__inner">
-      <a class="brand" href="/" aria-label="Go to homepage">
-        <span class="brand__dot" aria-hidden="true"></span>
-        <span class="brand__text">jayrock09</span>
+      <a class="brand" href="./" aria-label="Go to homepage">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span>jayrock09</span>
       </a>
 
       <nav class="nav__links" aria-label="Primary">
-        <a href="/" class="is-active">Home</a>
-        <a href="/link/">Links</a>
+        <a href="./" class="is-active">Home</a>
+        <a href="#arcade">Arcade</a>
+        <a href="link/">Links</a>
       </nav>
-      
-      <div class="nav__cta">
-        <a class="btn btn--ghost" href="https://www.youtube.com/@jayrock0927" target="_blank" rel="noopener">YouTube</a>
-        <a class="btn" href="https://discord.gg/qvprsaQfF" target="_blank" rel="noopener">Discord</a>
+
+      <div class="nav__actions">
+        <a class="button button--quiet" href="https://www.youtube.com/@jayrock0927" target="_blank" rel="noopener">YouTube</a>
+        <a class="button" href="https://modrinth.com/modpack/awesomely-vulkanized" target="_blank" rel="noopener">Modrinth</a>
       </div>
     </div>
   </header>
 
   <main id="main">
     <section class="hero">
-      <div class="bg">
-        <div class="bg__grid" aria-hidden="true"></div>
-        <div class="bg__blob bg__blob--a" aria-hidden="true"></div>
-        <div class="bg__blob bg__blob--b" aria-hidden="true"></div>
-        <div class="bg__glow" aria-hidden="true"></div>
-      </div>
+      <div class="wrap hero__grid">
+        <div class="hero__copy reveal">
+          <p class="eyebrow">Minecraft tuning / videos / browser toys</p>
+          <h1>Jayrock09 builds fast little things for the internet.</h1>
+          <p class="lead">
+            This is the home base for modpack experiments, simple web projects, videos, and a few arcade games
+            that actually run in the browser.
+          </p>
 
-      <div class="wrap hero__content">
-        <div class="badge reveal">
-          <span class="badge__ping" aria-hidden="true"></span>
-          <span>random builds • experiments • vibes</span>
-        </div>
-
-        <h1 class="reveal">
-          Hey — I'm <span class="text-accent">jayrock</span>.
-          <span class="subhead">I do random stuff on this site.</span>
-        </h1>
-
-        <p class="lead reveal">
-          Sometimes it's game/server things, sometimes it's tools, sometimes it's pure chaos.
-          If it looks fun, I probably built it.
-        </p>
-
-        <div class="hero__actions reveal">
-          <a class="btn btn--big" href="/link/">My links & stuff</a>
-          <a class="btn btn--big btn--ghost" href="#sections">What's here?</a>
-        </div>
-
-        <div class="stats reveal" role="list">
-          <div class="stat" role="listitem">
-            <div class="stat__k">Uploads</div>
-            <div class="stat__v">YouTube</div>
-          </div>
-          <div class="stat" role="listitem">
-            <div class="stat__k">Hangout</div>
-            <div class="stat__v">Discord</div>
-          </div>
-          <div class="stat" role="listitem">
-            <div class="stat__k">Site</div>
-            <div class="stat__v">Experiments</div>
+          <div class="hero__actions">
+            <a class="button button--large" href="#arcade">Play the arcade</a>
+            <a class="button button--large button--quiet" href="link/">Open links</a>
           </div>
         </div>
+
+        <aside class="world reveal" aria-label="Current project snapshot">
+          <div class="world__top">
+            <span class="world__tag">Current build</span>
+            <strong>awesomely vulkanized</strong>
+          </div>
+          <div class="voxel-map" aria-hidden="true">
+            <span class="block grass"></span>
+            <span class="block stone"></span>
+            <span class="block grass"></span>
+            <span class="block water"></span>
+            <span class="block grass"></span>
+            <span class="block ore"></span>
+            <span class="block stone"></span>
+            <span class="block lava"></span>
+            <span class="block grass"></span>
+            <span class="block stone"></span>
+            <span class="block grass"></span>
+            <span class="block ore"></span>
+            <span class="block stone"></span>
+            <span class="block grass"></span>
+            <span class="block water"></span>
+            <span class="block stone"></span>
+            <span class="block grass"></span>
+            <span class="block lava"></span>
+            <span class="block ore"></span>
+            <span class="block grass"></span>
+          </div>
+          <p>
+            A Fabric client pack focused on Vulkan rendering, performance mods, quality-of-life tweaks,
+            and Minecraft that feels smoother without getting overcomplicated.
+          </p>
+          <div class="world__stats" aria-label="Project details">
+            <span>Fabric</span>
+            <span>VulkanMod</span>
+            <span>QoL</span>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <section id="sections" class="section wrap">
+    <section class="section wrap" aria-labelledby="work-title">
       <div class="section__head reveal">
-        <h2>What you'll find here</h2>
-        <p>Three broad categories. The rest is whatever my brain decides at 2am.</p>
+        <p class="eyebrow">What is here</p>
+        <h2 id="work-title">A sharper home for the stuff jayrock09 actually makes.</h2>
       </div>
 
-      <div class="grid">
-        <article class="card reveal">
-          <div class="card__icon" aria-hidden="true">⚡</div>
-          <h3>Random builds</h3>
-          <p>Little web projects, pages, and experiments. Sometimes useful. Sometimes just funny.</p>
-          <div class="card__meta">Updated whenever</div>
+      <div class="feature-grid">
+        <article class="feature reveal">
+          <div class="feature__stamp">FPS</div>
+          <h3>Modpack tuning</h3>
+          <p>Performance-focused Minecraft packs, cleaner client setups, shader notes, and settings that make the game feel better.</p>
         </article>
 
-        <article class="card reveal">
-          <div class="card__icon" aria-hidden="true">🎮</div>
-          <h3>Gaming / server stuff</h3>
-          <p>Minecraft-ish things, tools, configs, and whatever I'm testing.</p>
-          <div class="card__meta">If it breaks, it's a feature</div>
+        <article class="feature reveal">
+          <div class="feature__stamp">VID</div>
+          <h3>Videos and clips</h3>
+          <p>Uploads, experiments, and whatever is worth showing instead of burying in a folder forever.</p>
         </article>
 
-        <article class="card reveal">
-          <div class="card__icon" aria-hidden="true">🧪</div>
-          <h3>Experiments</h3>
-          <p>UI ideas, motion, effects, and other “how far can I push this?” moments.</p>
-          <div class="card__meta">May contain chaos</div>
+        <article class="feature reveal">
+          <div class="feature__stamp">WEB</div>
+          <h3>Site experiments</h3>
+          <p>Small pages, interactive ideas, and browser builds with less filler and more working parts.</p>
         </article>
       </div>
     </section>
 
-    <section class="section wrap">
-      <div class="split">
-        <div class="reveal">
-          <h2>Quick links</h2>
-          <p>Everything important in one place — socials, projects, downloads, whatever.</p>
-          <div class="row">
-            <a class="pill" href="https://www.youtube.com/@jayrock0927" target="_blank" rel="noopener">▶ YouTube</a>
-            <a class="pill" href="https://discord.gg/qvprsaQfF" target="_blank" rel="noopener">💬 Discord</a>
-            <a class="pill" href="/link/">🔗 Links page</a>
-          </div>
+    <section id="arcade" class="section section--arcade" aria-labelledby="arcade-title">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow">Mini-games</p>
+          <h2 id="arcade-title">Jayrock Arcade</h2>
+          <p class="section__intro">Three small games built into the page. Scores reset when you refresh, just like old web toys should.</p>
         </div>
 
-        <div class="panel reveal">
-          <div class="panel__title">Status</div>
-          <div class="panel__line">
-            <span class="dot"></span>
-            <span>Site is alive and being upgraded</span>
+        <div class="arcade reveal">
+          <div class="arcade__tabs" role="tablist" aria-label="Choose a mini-game">
+            <button class="tab is-active" type="button" role="tab" aria-selected="true" aria-controls="game-chunk" data-game-tab="chunk">Chunk Rush</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="game-redstone" data-game-tab="redstone">Redstone Recall</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="game-ore" data-game-tab="ore">Ore Sweep</button>
           </div>
-          <div class="panel__hint">Tip: check the Links page for the newest stuff.</div>
+
+          <div class="game-panel is-active" id="game-chunk" role="tabpanel" data-game-panel="chunk">
+            <div class="game-panel__main">
+              <canvas id="chunk-canvas" class="game-canvas" width="360" height="460" aria-label="Chunk Rush game field"></canvas>
+              <div class="touch-row" aria-label="Touch movement controls">
+                <button class="pad-button" type="button" data-chunk-move="left">Left</button>
+                <button class="pad-button" type="button" data-chunk-move="right">Right</button>
+              </div>
+            </div>
+
+            <aside class="hud" aria-label="Chunk Rush scoreboard">
+              <h3>Chunk Rush</h3>
+              <p>Dodge lava, grab emeralds, and keep the run alive as the chunk gets faster.</p>
+              <div class="meter"><span>Score</span><strong id="chunk-score">0</strong></div>
+              <div class="meter"><span>Lives</span><strong id="chunk-lives">3</strong></div>
+              <div class="meter"><span>Best</span><strong id="chunk-best">0</strong></div>
+              <div class="hud__actions">
+                <button class="button" id="chunk-start" type="button">Start run</button>
+                <button class="button button--quiet" id="chunk-reset" type="button">Reset</button>
+              </div>
+            </aside>
+          </div>
+
+          <div class="game-panel" id="game-redstone" role="tabpanel" data-game-panel="redstone" hidden>
+            <div class="redstone-board" aria-label="Redstone Recall pads">
+              <button class="red-pad red-pad--lime" type="button" data-red-pad="0" aria-label="Green redstone pad"></button>
+              <button class="red-pad red-pad--gold" type="button" data-red-pad="1" aria-label="Gold redstone pad"></button>
+              <button class="red-pad red-pad--sky" type="button" data-red-pad="2" aria-label="Blue redstone pad"></button>
+              <button class="red-pad red-pad--ruby" type="button" data-red-pad="3" aria-label="Red redstone pad"></button>
+            </div>
+
+            <aside class="hud" aria-label="Redstone Recall scoreboard">
+              <h3>Redstone Recall</h3>
+              <p>Watch the pulse pattern and repeat it. Every clean round adds another signal.</p>
+              <div class="meter"><span>Level</span><strong id="redstone-level">0</strong></div>
+              <div class="meter"><span>Streak</span><strong id="redstone-streak">0</strong></div>
+              <div class="meter"><span>Status</span><strong id="redstone-status">Ready</strong></div>
+              <div class="hud__actions">
+                <button class="button" id="redstone-start" type="button">Start sequence</button>
+                <button class="button button--quiet" id="redstone-reset" type="button">Reset</button>
+              </div>
+            </aside>
+          </div>
+
+          <div class="game-panel" id="game-ore" role="tabpanel" data-game-panel="ore" hidden>
+            <div class="ore-wrap">
+              <div class="ore-target" aria-live="polite">
+                Target: <strong id="ore-target">Iron</strong>
+              </div>
+              <div class="ore-grid" id="ore-grid" aria-label="Ore Sweep grid"></div>
+            </div>
+
+            <aside class="hud" aria-label="Ore Sweep scoreboard">
+              <h3>Ore Sweep</h3>
+              <p>Mine the target ore before the clock drains. Correct hits add time; misses shave it off.</p>
+              <div class="meter"><span>Score</span><strong id="ore-score">0</strong></div>
+              <div class="meter"><span>Time</span><strong id="ore-time">30</strong></div>
+              <div class="meter"><span>Best</span><strong id="ore-best">0</strong></div>
+              <div class="hud__actions">
+                <button class="button" id="ore-start" type="button">Start sweep</button>
+                <button class="button button--quiet" id="ore-reset" type="button">Reset</button>
+              </div>
+            </aside>
+          </div>
         </div>
       </div>
     </section>
 
-    <footer class="footer">
-      <div class="wrap footer__inner">
-        <div class="footer__left">
-          <div class="brand brand--small">
-            <span class="brand__dot" aria-hidden="true"></span>
-            <span class="brand__text">jayrock09</span>
-          </div>
-          <div class="footer__sub">Built for fun. Updated whenever.</div>
+    <section class="section wrap" aria-labelledby="links-title">
+      <div class="link-band reveal">
+        <div>
+          <p class="eyebrow">Next stop</p>
+          <h2 id="links-title">Links without the clutter.</h2>
+          <p>Find the YouTube channel, the Modrinth pack, and the rest of the site in one clean place.</p>
         </div>
-        <div class="footer__right">
-          <a href="/link/">Links</a>
-          <a href="https://www.youtube.com/@jayrock0927" target="_blank" rel="noopener">YouTube</a>
-          <a href="https://discord.gg/qvprsaQfF" target="_blank" rel="noopener">Discord</a>
-        </div>
+        <a class="button button--large" href="link/">Go to links</a>
       </div>
-    </footer>
+    </section>
   </main>
 
-  <script>
-    // Scroll reveal (respects reduced motion)
-    (function () {
-      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (reduce) return;
-      const els = document.querySelectorAll('.reveal');
-      const io = new IntersectionObserver((entries) => {
-        for (const e of entries) {
-          if (e.isIntersecting) {
-            e.target.classList.add('reveal--in');
-            io.unobserve(e.target);
-          }
-        }
-      }, { threshold: 0.12 });
-      els.forEach(el => io.observe(el));
-    })();
-  </script>
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div>
+        <a class="brand brand--footer" href="./">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span>jayrock09</span>
+        </a>
+        <p>Built for Minecraft experiments, videos, and small web games.</p>
+      </div>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="link/">Links</a>
+        <a href="https://www.youtube.com/@jayrock0927" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://modrinth.com/modpack/awesomely-vulkanized" target="_blank" rel="noopener">Modrinth</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="arcade.js"></script>
 </body>
 </html>
